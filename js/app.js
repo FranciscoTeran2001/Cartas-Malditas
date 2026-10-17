@@ -2,7 +2,7 @@ import { cargarPerks, sacarCartas, elegirPorTiempo } from './mazo.js';
 import { playFlip, playTick, playMaullido, playCastigo, playSuerte } from './sonidos.js';
 
 // El tiempo baja en cada ronda: más presión, más fácil que el gato se impaciente
-const TIEMPOS_MS = [10000, 8000, 6000, 4000];
+const TIEMPOS_MS = [6000, 5000, 4000, 3000];
 const TAMANO_BUILD = 4;
 
 const mesa = document.getElementById('mesa');
