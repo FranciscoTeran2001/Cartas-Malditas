@@ -23,6 +23,8 @@ export async function cargarPerks() {
 
 // Probabilidad de que el comodín esté en un par (una vez por build; a ciegas te toca ~3% por ronda)
 export const PROB_COMODIN = 0.06;
+// "El gato se apiada": con "Me la pela" en la build el comodín sale mucho más
+export const PROB_COMODIN_CON_CASTIGO = 0.5; // ~1 de cada 3 castigados se salva
 export const COMODIN = { id: 'comodin', nombre: 'Gato de la Suerte', superviviente: 'Comodín', comodin: true };
 
 // Saca 2 cartas distintas que no estén ya en la build
@@ -36,7 +38,8 @@ export function sacarCartas(perks, build, { comodinUsado = false } = {}) {
 
     const mano = [];
     if (castigo.length && Math.random() < PROB_CASTIGO) mano.push(castigo[0]);
-    if (!comodinUsado && Math.random() < PROB_COMODIN) mano.push(COMODIN);
+    const probComodin = build.some(p => p.castigo) ? PROB_COMODIN_CON_CASTIGO : PROB_COMODIN;
+    if (!comodinUsado && Math.random() < probComodin) mano.push(COMODIN);
     while (mano.length < 2) {
         const usarAgotamiento = !sinAgotamiento && agotamiento.length
             && !mano.some(p => p.agotamiento) && Math.random() < PROB_AGOTAMIENTO;
