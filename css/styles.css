@@ -260,14 +260,6 @@ h1 {
 .frente strong { font-size: clamp(13px, 3vw, 18px); color: var(--ambar); }
 .frente small { font-size: 13px; opacity: 0.7; }
 
-.tecla {
-    position: absolute;
-    top: 8px;
-    left: 10px;
-    font-size: 12px;
-    opacity: 0.6;
-}
-
 .etiqueta {
     position: absolute;
     top: 8px;
@@ -365,14 +357,6 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
 
 .ayuda { font-size: 14px; opacity: 0.6; }
 
-kbd {
-    padding: 1px 6px;
-    border: 1px solid var(--borde);
-    border-radius: 4px;
-    background: rgba(0, 0, 0, 0.4);
-    font-family: inherit;
-}
-
 /* ─── Toast ─── */
 .toast {
     position: fixed;
@@ -464,7 +448,7 @@ kbd {
     .carta::before, .carta::after { top: -32px; border-left-width: 32px; border-right-width: 32px; border-bottom-width: 44px; }
     .frente strong { font-size: 34px; }
     .frente small { font-size: 22px; }
-    .etiqueta, .tecla { font-size: 18px; }
+    .etiqueta { font-size: 18px; }
     .huellas { font-size: 34px; }
     .barra-fondo { height: 22px; }
     #textoTiempo { width: 70px; font-size: 30px; }

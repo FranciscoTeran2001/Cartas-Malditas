@@ -69,16 +69,14 @@ function crearCarta(perk, indice, bocaArriba) {
     if (perk.agotamiento) carta.classList.add('es-agotamiento');
     if (perk.comodin) carta.classList.add('es-comodin');
     // Boca abajo sin el nombre de la perk: la carta es sorpresa hasta elegirla
-    carta.setAttribute('aria-label', bocaArriba ? `${perk.nombre} (tecla ${indice + 1})` : `Carta ${indice + 1}`);
+    carta.setAttribute('aria-label', bocaArriba ? perk.nombre : `Carta ${indice + 1}`);
     carta.innerHTML = `
         <div class="carta-inner">
             <div class="cara dorso">
-                <span class="tecla">${indice + 1}</span>
                 <div class="ojo"></div>
                 <span class="huellas">🐾</span>
             </div>
             <div class="cara frente">
-                ${bocaArriba ? `<span class="tecla">${indice + 1}</span>` : ''}
                 ${perk.castigo ? '<span class="etiqueta etiqueta-castigo">😈 Castigo</span>' : ''}
                 ${perk.agotamiento ? '<span class="etiqueta etiqueta-agotamiento">⚡ Agotamiento</span>' : ''}
                 ${perk.comodin ? '<span class="etiqueta etiqueta-comodin">🍀 Comodín</span><span class="comodin-icono">🐈‍⬛</span>'
@@ -238,13 +236,6 @@ btnReiniciar.addEventListener('click', () => {
     actualizarSlots();
     btnReiniciar.hidden = true;
     nuevaRonda();
-});
-
-// Teclas 1, 2 y 3 (o flechas) para elegir
-document.addEventListener('keydown', (e) => {
-    if (e.key === '1' || e.key === 'ArrowLeft') elegir(0);
-    if (e.key === '2' || e.key === 'ArrowRight') elegir(1);
-    if (e.key === '3') elegir(2);
 });
 
 async function init() {
