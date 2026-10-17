@@ -1,7 +1,7 @@
 // Prueba rápida de la lógica del mazo: node js/mazo.test.mjs
 import assert from 'node:assert';
 import fs from 'node:fs';
-import { sacarCartas, elegirPorTiempo, perkDeLaSuerte } from './mazo.js';
+import { sacarCartas, elegirPorTiempo, perksDeLaSuerte } from './mazo.js';
 const sacarPar = (perks, build) => sacarCartas(perks, build);
 
 const perks = JSON.parse(fs.readFileSync(new URL('../perks.json', import.meta.url), 'utf8'));
@@ -23,11 +23,12 @@ for (let k = 0; k < 5000; k++) {
         assert.ok(!par2.some(p => p.agotamiento), 'agotamiento con build que lo bloquea');
     }
 }
-// Comodín: no se repite y su premio es una perk "mejor" que respeta la build
+// Comodín: no se repite y la ronda de la suerte da 3 perks "mejor" distintas que respetan la build
 for (let k = 0; k < 2000; k++) {
     assert.ok(!sacarCartas(perks, [], { comodinUsado: true }).some(p => p.comodin), 'comodín repetido');
-    const premio = perkDeLaSuerte(perks, [fajador]);
-    assert.ok(premio.mejor && !premio.agotamiento, 'premio no meta o agotamiento repetido');
+    const trio = perksDeLaSuerte(perks, [fajador]);
+    assert.strictEqual(new Set(trio.map(p => p.id)).size, 3);
+    assert.ok(trio.every(p => p.mejor && !p.agotamiento), 'no meta o agotamiento repetido');
 }
 
 assert.strictEqual(elegirPorTiempo([normal, meLaPela]), 1, 'al acabarse el tiempo debe tocar el castigo');

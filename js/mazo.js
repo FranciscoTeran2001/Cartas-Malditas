@@ -45,13 +45,13 @@ export function sacarCartas(perks, build, { comodinUsado = false } = {}) {
     return barajar(mano);
 }
 
-// Premio del comodín: una perk "mejor" (meta) al azar que respete las reglas de la build
-export function perkDeLaSuerte(perks, build) {
+// Ronda de la suerte: 3 perks "mejor" (meta) al azar que respeten las reglas de la build
+export function perksDeLaSuerte(perks, build, cantidad = 3) {
     const sinAgotamiento = build.some(p => p.agotamiento || p.castigo);
     const candidatas = perks.filter(p => p.mejor
         && !build.some(b => b.id === p.id)
         && !(sinAgotamiento && p.agotamiento));
-    return candidatas[Math.floor(Math.random() * candidatas.length)] ?? null;
+    return barajar(candidatas).slice(0, cantidad);
 }
 
 // Si se acaba el tiempo: el gato se impacienta y te da el castigo si está; si no, una al azar

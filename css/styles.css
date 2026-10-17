@@ -303,6 +303,11 @@ h1 {
     background: radial-gradient(circle at 50% 35%, #1f5c3a, #0a1f12);
 }
 
+/* Ronda de la suerte: 3 cartas boca arriba, más pequeñas para que quepan */
+.mesa-suerte { flex-wrap: wrap; }
+.mesa-suerte .carta { width: clamp(100px, 28vw, 220px); }
+.barra.suerte { background: linear-gradient(90deg, #26af5f, #2ed573); }
+
 /* Resumen final */
 .resumen { width: 100%; }
 .resumen h2 { margin: 0 0 4px; color: var(--ambar); font-size: clamp(18px, 3.5vw, 26px); }
@@ -426,6 +431,7 @@ kbd {
     .zona-juego { max-width: 1000px; }
     .mesa { min-height: 560px; gap: 60px; }
     .carta { width: 340px; }
+    .mesa-suerte .carta { width: 290px; }
     .comodin-icono { font-size: 140px; }
     .resumen h2 { font-size: 34px; }
     .resumen li { font-size: 20px; padding: 14px 18px; grid-template-columns: 40px 1fr 1fr; }
@@ -450,6 +456,7 @@ kbd {
     .zona-juego { max-width: 1500px; }
     .mesa { min-height: 800px; gap: 90px; }
     .carta { width: 500px; }
+    .mesa-suerte .carta { width: 430px; }
     .comodin-icono { font-size: 200px; }
     .resumen h2 { font-size: 48px; }
     .resumen p { font-size: 24px; }

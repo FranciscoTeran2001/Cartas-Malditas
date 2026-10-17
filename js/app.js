@@ -1,4 +1,4 @@
-import { cargarPerks, sacarCartas, elegirPorTiempo, perkDeLaSuerte } from './mazo.js';
+import { cargarPerks, sacarCartas, elegirPorTiempo, perksDeLaSuerte } from './mazo.js';
 import { playFlip, playTick, playMaullido, playCastigo, playSuerte } from './sonidos.js';
 
 // El tiempo baja en cada ronda: más presión, más fácil que el gato se impaciente
@@ -19,6 +19,7 @@ let eligiendo = false;
 let timerId = null;
 let historial = [];       // { elegida, otras, nota } por ronda, para el resumen final
 let comodinUsado = false; // el Gato de la Suerte sale como mucho una vez por build
+let rondaSuerte = false;
 
 // ─── Toast de notificación ────────────────────────────────────────────────────
 function mostrarToast(mensaje, tipo = 'info') {
@@ -60,14 +61,15 @@ function actualizarSlots() {
 }
 
 // ─── Cartas ───────────────────────────────────────────────────────────────────
-function crearCarta(perk, indice) {
+function crearCarta(perk, indice, bocaArriba) {
     const carta = document.createElement('button');
     carta.className = 'carta repartida';
+    if (bocaArriba) carta.classList.add('volteada');
     if (perk.castigo) carta.classList.add('es-castigo');
     if (perk.agotamiento) carta.classList.add('es-agotamiento');
     if (perk.comodin) carta.classList.add('es-comodin');
-    // Sin el nombre de la perk: la carta es sorpresa hasta elegirla
-    carta.setAttribute('aria-label', `Carta ${indice + 1}`);
+    // Boca abajo sin el nombre de la perk: la carta es sorpresa hasta elegirla
+    carta.setAttribute('aria-label', bocaArriba ? `${perk.nombre} (tecla ${indice + 1})` : `Carta ${indice + 1}`);
     carta.innerHTML = `
         <div class="carta-inner">
             <div class="cara dorso">
@@ -76,6 +78,7 @@ function crearCarta(perk, indice) {
                 <span class="huellas">🐾</span>
             </div>
             <div class="cara frente">
+                ${bocaArriba ? `<span class="tecla">${indice + 1}</span>` : ''}
                 ${perk.castigo ? '<span class="etiqueta etiqueta-castigo">😈 Castigo</span>' : ''}
                 ${perk.agotamiento ? '<span class="etiqueta etiqueta-agotamiento">⚡ Agotamiento</span>' : ''}
                 ${perk.comodin ? '<span class="etiqueta etiqueta-comodin">🍀 Comodín</span><span class="comodin-icono">🐈‍⬛</span>'
@@ -89,18 +92,32 @@ function crearCarta(perk, indice) {
     return carta;
 }
 
-async function nuevaRonda() {
-    par = sacarCartas(perks, build, { comodinUsado });
-    mesa.innerHTML = '';
-    par.forEach((perk, i) => mesa.appendChild(crearCarta(perk, i)));
+// suerte: ronda del comodín, 3 de las mejores perks boca arriba y sin tiempo
+async function nuevaRonda(suerte = false) {
+    par = suerte ? perksDeLaSuerte(perks, build) : sacarCartas(perks, build, { comodinUsado });
+    rondaSuerte = suerte && par.length > 0;
+    if (suerte && !rondaSuerte) par = sacarCartas(perks, build, { comodinUsado });
 
-    // Las cartas llegan boca abajo (animación .repartida en CSS)
-    playFlip();
-    await delay(200);
-    playFlip();
-    await delay(450);
+    mesa.innerHTML = '';
+    mesa.classList.toggle('mesa-suerte', rondaSuerte);
+    par.forEach((perk, i) => mesa.appendChild(crearCarta(perk, i, rondaSuerte)));
+
+    // Las cartas llegan a la mesa (animación .repartida en CSS)
+    for (let i = 0; i < par.length; i++) {
+        playFlip();
+        await delay(200);
+    }
+    await delay(250);
     eligiendo = true;
-    iniciarTimer(TIEMPOS_MS[Math.min(build.length, TIEMPOS_MS.length - 1)]);
+
+    barra.classList.toggle('suerte', rondaSuerte);
+    if (rondaSuerte) {
+        barra.classList.remove('urgente');
+        barra.style.width = '100%';
+        textoTiempo.innerText = '🍀';
+    } else {
+        iniciarTimer(TIEMPOS_MS[Math.min(build.length, TIEMPOS_MS.length - 1)]);
+    }
 }
 
 function iniciarTimer(duracion) {
@@ -126,8 +143,9 @@ function iniciarTimer(duracion) {
     timerId = requestAnimationFrame(actualizar);
 }
 
-// Gato de la Suerte: quita "Me la pela" si lo tienes; si no, regala una de las mejores perks
-function usarComodin() {
+// Gato de la Suerte: quita "Me la pela" si lo tienes; si no, toca elegir entre 3 de las mejores.
+// Devuelve true si hay que jugar la ronda de la suerte.
+function usarComodin(ronda) {
     comodinUsado = true;
     playSuerte();
 
@@ -135,14 +153,13 @@ function usarComodin() {
     if (castigo !== -1) {
         const liberada = build.splice(castigo, 1)[0];
         mostrarToast(`🍀 ¡Gato de la Suerte! Se llevó tu "${liberada.nombre}"`, 'success');
-        return `se llevó ${liberada.nombre}`;
+        ronda.nota = `se llevó ${liberada.nombre}`;
+        return false;
     }
 
-    const premio = perkDeLaSuerte(perks, build);
-    if (!premio) return 'no encontró nada que regalar';
-    build.push(premio);
-    mostrarToast(`🍀 ¡Gato de la Suerte! Te regaló "${premio.nombre}"`, 'success');
-    return `te regaló ${premio.nombre}`;
+    mostrarToast('🍀 ¡Gato de la Suerte! Elige una de las 3 mejores perks, sin tiempo', 'success');
+    ronda.nota = 'ronda de la suerte';
+    return true;
 }
 
 async function elegir(indice, porTiempo = false) {
@@ -153,16 +170,17 @@ async function elegir(indice, porTiempo = false) {
     const perk = par[indice];
     const cartas = [...mesa.querySelectorAll('.carta')];
     cartas.forEach(c => { c.disabled = true; });
-    const ronda = { elegida: perk, otras: par.filter((_, i) => i !== indice) };
+    const ronda = { elegida: perk, otras: par.filter((_, i) => i !== indice), suerte: rondaSuerte };
     historial.push(ronda);
 
-    // Primero se voltea la elegida y luego la otra, para ver lo que te perdiste
+    // Primero se voltea la elegida y luego las otras, para ver lo que te perdiste
     cartas[indice].classList.add('elegida', 'volteada');
-    playFlip();
+    if (!rondaSuerte) playFlip();
     await delay(700);
 
+    let siguienteSuerte = false;
     if (perk.comodin) {
-        ronda.nota = usarComodin();
+        siguienteSuerte = usarComodin(ronda);
     } else if (perk.castigo) {
         playCastigo();
         mostrarToast(porTiempo
@@ -180,15 +198,16 @@ async function elegir(indice, porTiempo = false) {
     cartas.forEach((c, i) => { if (i !== indice) c.classList.add('descartada', 'volteada'); });
     await delay(1400);
 
+    if (siguienteSuerte) return nuevaRonda(true);
     if (build.length >= TAMANO_BUILD) return mostrarResumen();
     nuevaRonda();
 }
 
 function mostrarResumen() {
-    const filas = historial.map(({ elegida, otras, nota }, i) => `
+    const filas = historial.map(({ elegida, otras, nota, suerte }, i) => `
         <li>
             <span class="ronda">${i + 1}</span>
-            <span class="ganada">✅ ${elegida.comodin ? '🍀 ' : ''}${elegida.castigo ? '😈 ' : ''}${elegida.nombre}${nota ? ` <em>(${nota})</em>` : ''}</span>
+            <span class="ganada">✅ ${elegida.comodin || suerte ? '🍀 ' : ''}${elegida.castigo ? '😈 ' : ''}${elegida.nombre}${nota ? ` <em>(${nota})</em>` : ''}</span>
             <span class="perdida">❌ ${otras.map(p => p.nombre).join(' / ')}</span>
         </li>
     `).join('');
@@ -221,10 +240,11 @@ btnReiniciar.addEventListener('click', () => {
     nuevaRonda();
 });
 
-// Teclas 1 y 2 (o flechas) para elegir
+// Teclas 1, 2 y 3 (o flechas) para elegir
 document.addEventListener('keydown', (e) => {
     if (e.key === '1' || e.key === 'ArrowLeft') elegir(0);
     if (e.key === '2' || e.key === 'ArrowRight') elegir(1);
+    if (e.key === '3') elegir(2);
 });
 
 async function init() {
