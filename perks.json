@@ -45,7 +45,8 @@
     "id": 8,
     "nombre": "Consuelo",
     "superviviente": "Rebecca Chambers",
-    "pathImagen": "images/perks/AdaCherry/iconPerks_Reassurance.png"
+    "pathImagen": "images/perks/AdaCherry/iconPerks_Reassurance.png",
+    "mejor": true
   },
   {
     "id": 9,
@@ -147,7 +148,8 @@
     "id": 25,
     "nombre": "Tiempo Prestado",
     "superviviente": "Bill Overbeck",
-    "pathImagen": "images/perks/Bill/iconPerks_BorrowedTime.png"
+    "pathImagen": "images/perks/Bill/iconPerks_BorrowedTime.png",
+    "mejor": true
   },
   {
     "id": 26,
@@ -159,7 +161,8 @@
     "id": 27,
     "nombre": "Inquebrantable",
     "superviviente": "Bill Overbeck",
-    "pathImagen": "images/perks/Bill/iconPerks_Unbreakable.png"
+    "pathImagen": "images/perks/Bill/iconPerks_Unbreakable.png",
+    "mejor": true
   },
   {
     "id": 28,
@@ -246,7 +249,8 @@
     "nombre": "Agilidad",
     "superviviente": "Feng Min",
     "pathImagen": "images/perks/FengMin/iconPerks_Lithe.png",
-    "agotamiento": true
+    "agotamiento": true,
+    "mejor": true
   },
   {
     "id": 42,
@@ -362,7 +366,8 @@
     "id": 60,
     "nombre": "Oportunidades",
     "superviviente": "Kate Denson",
-    "pathImagen": "images/perks/Kate/iconPerks_WindowsOfOpportunity.png"
+    "pathImagen": "images/perks/Kate/iconPerks_WindowsOfOpportunity.png",
+    "mejor": true
   },
   {
     "id": 61,
@@ -405,7 +410,8 @@
     "id": 67,
     "nombre": "Golpe Decisivo",
     "superviviente": "Laurie Strode",
-    "pathImagen": "images/perks/LaurieStrode/iconPerks_DecisiveStrike.png"
+    "pathImagen": "images/perks/LaurieStrode/iconPerks_DecisiveStrike.png",
+    "mejor": true
   },
   {
     "id": 68,
@@ -453,7 +459,8 @@
     "id": 75,
     "nombre": "Resurgimiento",
     "superviviente": "Jill Valentine",
-    "pathImagen": "images/perks/LeonJill/iconPerks_Resurgence.png"
+    "pathImagen": "images/perks/LeonJill/iconPerks_Resurgence.png",
+    "mejor": true
   },
   {
     "id": 76,
@@ -882,7 +889,8 @@
     "id": 146,
     "nombre": "Extraoficial",
     "superviviente": "Zarina Kassir",
-    "pathImagen": "images/perks/Zarina/iconPerks_OffTheRecord.png"
+    "pathImagen": "images/perks/Zarina/iconPerks_OffTheRecord.png",
+    "mejor": true
   },
   {
     "id": 147,
@@ -894,7 +902,8 @@
     "id": 148,
     "nombre": "Familia",
     "superviviente": "General",
-    "pathImagen": "images/perks/iconPerks_Kindred.png"
+    "pathImagen": "images/perks/iconPerks_Kindred.png",
+    "mejor": true
   },
   {
     "id": 149,
@@ -930,7 +939,8 @@
     "id": 154,
     "nombre": "Demuestra lo que vales",
     "superviviente": "General",
-    "pathImagen": "images/perks/iconPerks_ProveThyself.png"
+    "pathImagen": "images/perks/iconPerks_ProveThyself.png",
+    "mejor": true
   },
   {
     "id": 155,
@@ -973,7 +983,8 @@
     "nombre": "Sprint",
     "superviviente": "General",
     "pathImagen": "images/perks/iconPerks_SprintBurst.png",
-    "agotamiento": true
+    "agotamiento": true,
+    "mejor": true
   },
   {
     "id": 162,
@@ -1003,7 +1014,8 @@
     "id": 166,
     "nombre": "Adrenalina",
     "superviviente": "Meg Thomas",
-    "pathImagen": "images/perks/iconPerks_Adrenaline.png"
+    "pathImagen": "images/perks/iconPerks_Adrenaline.png",
+    "mejor": true
   },
   {
     "id": 167,

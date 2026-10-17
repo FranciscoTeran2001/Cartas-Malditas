@@ -25,9 +25,8 @@ export async function cargarPerks() {
 export const PROB_COMODIN = 0.06;
 export const COMODIN = { id: 'comodin', nombre: 'Gato de la Suerte', superviviente: 'Comodín', comodin: true };
 
-// Saca cartas distintas que no estén ya en la build.
-// suerte: ronda del comodín, sin castigo ni comodín.
-export function sacarCartas(perks, build, { cantidad = 2, suerte = false, comodinUsado = false } = {}) {
+// Saca 2 cartas distintas que no estén ya en la build
+export function sacarCartas(perks, build, { comodinUsado = false } = {}) {
     const disponibles = perks.filter(p => !build.some(b => b.id === p.id));
     // Con una de agotamiento o con "Me la pela" en la build, el agotamiento ya no sirve
     const sinAgotamiento = build.some(p => p.agotamiento || p.castigo);
@@ -36,14 +35,23 @@ export function sacarCartas(perks, build, { cantidad = 2, suerte = false, comodi
     const normales = barajar(disponibles.filter(p => !p.agotamiento && !p.castigo));
 
     const mano = [];
-    if (!suerte && castigo.length && Math.random() < PROB_CASTIGO) mano.push(castigo[0]);
-    if (!suerte && !comodinUsado && mano.length < cantidad && Math.random() < PROB_COMODIN) mano.push(COMODIN);
-    while (mano.length < cantidad) {
+    if (castigo.length && Math.random() < PROB_CASTIGO) mano.push(castigo[0]);
+    if (!comodinUsado && Math.random() < PROB_COMODIN) mano.push(COMODIN);
+    while (mano.length < 2) {
         const usarAgotamiento = !sinAgotamiento && agotamiento.length
             && !mano.some(p => p.agotamiento) && Math.random() < PROB_AGOTAMIENTO;
         mano.push(usarAgotamiento ? agotamiento.pop() : normales.pop());
     }
     return barajar(mano);
+}
+
+// Premio del comodín: una perk "mejor" (meta) al azar que respete las reglas de la build
+export function perkDeLaSuerte(perks, build) {
+    const sinAgotamiento = build.some(p => p.agotamiento || p.castigo);
+    const candidatas = perks.filter(p => p.mejor
+        && !build.some(b => b.id === p.id)
+        && !(sinAgotamiento && p.agotamiento));
+    return candidatas[Math.floor(Math.random() * candidatas.length)] ?? null;
 }
 
 // Si se acaba el tiempo: el gato se impacienta y te da el castigo si está; si no, una al azar
