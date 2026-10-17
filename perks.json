@@ -1,0 +1,1069 @@
+[
+  {
+    "id": 1,
+    "nombre": "As en la manga",
+    "superviviente": "Ace Visconti",
+    "pathImagen": "images/perks/AceVisconti/iconPerks_AceInTheHole.png"
+  },
+  {
+    "id": 2,
+    "nombre": "A Mano Descubierta",
+    "superviviente": "Ace Visconti",
+    "pathImagen": "images/perks/AceVisconti/iconPerks_OpenHanded.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Subir las Apuestas",
+    "superviviente": "Ace Visconti",
+    "pathImagen": "images/perks/AceVisconti/iconPerks_UpTheAnte.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Mejor que nuevo",
+    "superviviente": "Rebecca Chambers",
+    "pathImagen": "images/perks/AdaCherry/iconPerks_BetterThanNew.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Hiperconcentración",
+    "superviviente": "Rebecca Chambers",
+    "pathImagen": "images/perks/AdaCherry/iconPerks_Hyperfocus.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Perfil bajo",
+    "superviviente": "Rebecca Chambers",
+    "pathImagen": "images/perks/AdaCherry/iconPerks_LowProfile.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Curación reactiva",
+    "superviviente": "Rebecca Chambers",
+    "pathImagen": "images/perks/AdaCherry/iconPerks_ReactiveHealing.png"
+  },
+  {
+    "id": 8,
+    "nombre": "Consuelo",
+    "superviviente": "Rebecca Chambers",
+    "pathImagen": "images/perks/AdaCherry/iconPerks_Reassurance.png"
+  },
+  {
+    "id": 9,
+    "nombre": "Intercepción telefónica",
+    "superviviente": "Rebecca Chambers",
+    "pathImagen": "images/perks/AdaCherry/iconPerks_Wiretap.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Autodidacta",
+    "superviviente": "Adam Francis",
+    "pathImagen": "images/perks/AdamFrancis/iconPerks_Autodidact.png"
+  },
+  {
+    "id": 11,
+    "nombre": "Liberación",
+    "superviviente": "Adam Francis",
+    "pathImagen": "images/perks/AdamFrancis/iconPerks_Deliverance.png"
+  },
+  {
+    "id": 12,
+    "nombre": "Distracción",
+    "superviviente": "Adam Francis",
+    "pathImagen": "images/perks/AdamFrancis/iconPerks_Diversion.png"
+  },
+  {
+    "id": 13,
+    "nombre": "Inspiración Bárdica",
+    "superviviente": "Aestri Yazar",
+    "pathImagen": "images/perks/AestriYazar/iconPerks_BardicInspiration.png"
+  },
+  {
+    "id": 14,
+    "nombre": "Ilusión Reflejada",
+    "superviviente": "Aestri Yazar",
+    "pathImagen": "images/perks/AestriYazar/iconPerks_MirroredIllusion.png"
+  },
+  {
+    "id": 15,
+    "nombre": "Mirada Fija",
+    "superviviente": "Aestri Yazar",
+    "pathImagen": "images/perks/AestriYazar/iconPerks_StillSight.png"
+  },
+  {
+    "id": 16,
+    "nombre": "Campeón de la Luz",
+    "superviviente": "Alan Wake",
+    "pathImagen": "images/perks/AlanWake/iconsPerks_ChampionOfLight.png"
+  },
+  {
+    "id": 17,
+    "nombre": "Fecha Límite",
+    "superviviente": "Alan Wake",
+    "pathImagen": "images/perks/AlanWake/iconsPerks_Deadline.png"
+  },
+  {
+    "id": 18,
+    "nombre": "Bendición: Iluminación",
+    "superviviente": "Alan Wake",
+    "pathImagen": "images/perks/AlanWake/iconsPerks_Illumination.png"
+  },
+  {
+    "id": 19,
+    "nombre": "Sujétate",
+    "superviviente": "Ash Williams",
+    "pathImagen": "images/perks/Ash/iconPerks_BuckleUp.png"
+  },
+  {
+    "id": 20,
+    "nombre": "Nos Vemos",
+    "superviviente": "Ash Williams",
+    "pathImagen": "images/perks/Ash/iconPerks_FlipFlop.png"
+  },
+  {
+    "id": 21,
+    "nombre": "El Temple del Hombre",
+    "superviviente": "Ash Williams",
+    "pathImagen": "images/perks/Ash/iconPerks_MettleOfMan.png"
+  },
+  {
+    "id": 22,
+    "nombre": "Cosecha Lo Que Siembras",
+    "superviviente": "Aurora Stardotter",
+    "pathImagen": "images/perks/AuroraStardotter/T_UI_iconsPerks_FruitsOfYourLabor.png"
+  },
+  {
+    "id": 23,
+    "nombre": "El Clamor de la Salvación",
+    "superviviente": "Aurora Stardotter",
+    "pathImagen": "images/perks/AuroraStardotter/T_UI_iconsPerks_SalvationsCry.png"
+  },
+  {
+    "id": 24,
+    "nombre": "Bendición: Inquebrantable",
+    "superviviente": "Aurora Stardotter",
+    "pathImagen": "images/perks/AuroraStardotter/T_UI_iconsPerks_BoonSteadfast.png"
+  },
+  {
+    "id": 25,
+    "nombre": "Tiempo Prestado",
+    "superviviente": "Bill Overbeck",
+    "pathImagen": "images/perks/Bill/iconPerks_BorrowedTime.png"
+  },
+  {
+    "id": 26,
+    "nombre": "Abandonado a tu Suerte",
+    "superviviente": "Bill Overbeck",
+    "pathImagen": "images/perks/Bill/iconPerks_LeftBehind.png"
+  },
+  {
+    "id": 27,
+    "nombre": "Inquebrantable",
+    "superviviente": "Bill Overbeck",
+    "pathImagen": "images/perks/Bill/iconPerks_Unbreakable.png"
+  },
+  {
+    "id": 28,
+    "nombre": "Pacto de Sangre",
+    "superviviente": "Cheryl Mason",
+    "pathImagen": "images/perks/CherylMason/iconPerks_BloodPact.png"
+  },
+  {
+    "id": 29,
+    "nombre": "Alianza Reprimida",
+    "superviviente": "Cheryl Mason",
+    "pathImagen": "images/perks/CherylMason/iconPerks_RepressedAlliance.png"
+  },
+  {
+    "id": 30,
+    "nombre": "Guardia del Alma",
+    "superviviente": "Cheryl Mason",
+    "pathImagen": "images/perks/CherylMason/iconPerks_SoulGuard.png"
+  },
+  {
+    "id": 31,
+    "nombre": "Fajador",
+    "superviviente": "David King",
+    "pathImagen": "images/perks/DavidKing/iconPerks_DeadHard.png",
+    "agotamiento": true
+  },
+  {
+    "id": 32,
+    "nombre": "Me la pela",
+    "superviviente": "David King",
+    "pathImagen": "images/perks/DavidKing/iconPerks_NoMither.png",
+    "castigo": true
+  },
+  {
+    "id": 33,
+    "nombre": "Vamos a Vivir para Siempre",
+    "superviviente": "David King",
+    "pathImagen": "images/perks/DavidKing/iconPerks_WereGonnaLiveForever.png"
+  },
+  {
+    "id": 34,
+    "nombre": "Corazonada",
+    "superviviente": "Detective David Tapp",
+    "pathImagen": "images/perks/DetectiveTapp/iconPerks_DetectivesHunch.png"
+  },
+  {
+    "id": 35,
+    "nombre": "Vigilancia",
+    "superviviente": "Detective David Tapp",
+    "pathImagen": "images/perks/DetectiveTapp/iconPerks_StakeOut.png"
+  },
+  {
+    "id": 36,
+    "nombre": "Tenacidad",
+    "superviviente": "Detective David Tapp",
+    "pathImagen": "images/perks/DetectiveTapp/iconPerks_Tenacity.png"
+  },
+  {
+    "id": 37,
+    "nombre": "Evaluación",
+    "superviviente": "Élodie Rakoto",
+    "pathImagen": "images/perks/ElodieRakoto/iconPerks_Appraisal.png"
+  },
+  {
+    "id": 38,
+    "nombre": "Engaño",
+    "superviviente": "Élodie Rakoto",
+    "pathImagen": "images/perks/ElodieRakoto/iconPerks_Deception.png"
+  },
+  {
+    "id": 39,
+    "nombre": "Lucha Intensa",
+    "superviviente": "Élodie Rakoto",
+    "pathImagen": "images/perks/ElodieRakoto/iconPerks_PowerStruggle.png"
+  },
+  {
+    "id": 40,
+    "nombre": "Alerta",
+    "superviviente": "Feng Min",
+    "pathImagen": "images/perks/FengMin/iconPerks_Alert.png"
+  },
+  {
+    "id": 41,
+    "nombre": "Agilidad",
+    "superviviente": "Feng Min",
+    "pathImagen": "images/perks/FengMin/iconPerks_Lithe.png",
+    "agotamiento": true
+  },
+  {
+    "id": 42,
+    "nombre": "Pericia Técnica",
+    "superviviente": "Feng Min",
+    "pathImagen": "images/perks/FengMin/iconPerks_Technician.png"
+  },
+  {
+    "id": 43,
+    "nombre": "Nacido para Esto",
+    "superviviente": "Gabriel Soma",
+    "pathImagen": "images/perks/GabrielSoma/IconPerks_madeForThis.png"
+  },
+  {
+    "id": 44,
+    "nombre": "Chatarrero",
+    "superviviente": "Gabriel Soma",
+    "pathImagen": "images/perks/GabrielSoma/IconPerks_scavenger.png"
+  },
+  {
+    "id": 45,
+    "nombre": "Solucionador de Problemas",
+    "superviviente": "Gabriel Soma",
+    "pathImagen": "images/perks/GabrielSoma/IconPerks_troubleshooter.png"
+  },
+  {
+    "id": 46,
+    "nombre": "Concentración Interna",
+    "superviviente": "Haddie Kaur",
+    "pathImagen": "images/perks/Haddie/iconPerks_InnerFocus.png"
+  },
+  {
+    "id": 47,
+    "nombre": "Pasión",
+    "superviviente": "Haddie Kaur",
+    "pathImagen": "images/perks/Haddie/iconPerks_Overzealous.png"
+  },
+  {
+    "id": 48,
+    "nombre": "Manifestación residual",
+    "superviviente": "Haddie Kaur",
+    "pathImagen": "images/perks/Haddie/iconPerks_ResidualManifest.png"
+  },
+  {
+    "id": 49,
+    "nombre": "De Frente",
+    "superviviente": "Jane Romero",
+    "pathImagen": "images/perks/Jane/iconPerks_HeadOn.png",
+    "agotamiento": true
+  },
+  {
+    "id": 50,
+    "nombre": "Serenidad",
+    "superviviente": "Jane Romero",
+    "pathImagen": "images/perks/Jane/iconPerks_Poised.png"
+  },
+  {
+    "id": 51,
+    "nombre": "Solidaridad",
+    "superviviente": "Jane Romero",
+    "pathImagen": "images/perks/Jane/iconPerks_Solidarity.png"
+  },
+  {
+    "id": 52,
+    "nombre": "Postratamiento",
+    "superviviente": "Jeff Johansen",
+    "pathImagen": "images/perks/JeffJohansen/iconPerks_Aftercare.png"
+  },
+  {
+    "id": 53,
+    "nombre": "Ruptura",
+    "superviviente": "Jeff Johansen",
+    "pathImagen": "images/perks/JeffJohansen/iconPerks_Breakdown.png"
+  },
+  {
+    "id": 54,
+    "nombre": "Distorsión",
+    "superviviente": "Jeff Johansen",
+    "pathImagen": "images/perks/JeffJohansen/iconPerks_Distortion.png"
+  },
+  {
+    "id": 55,
+    "nombre": "Bendición: Exponencial",
+    "superviviente": "Jonah Vasquez",
+    "pathImagen": "images/perks/JonahVasquez/T_iconPerks_BoonExponential.png"
+  },
+  {
+    "id": 56,
+    "nombre": "Medida Correctiva",
+    "superviviente": "Jonah Vasquez",
+    "pathImagen": "images/perks/JonahVasquez/T_iconPerks_CorrectiveAction.png"
+  },
+  {
+    "id": 57,
+    "nombre": "Sobreponerse",
+    "superviviente": "Jonah Vasquez",
+    "pathImagen": "images/perks/JonahVasquez/T_iconPerks_Overcome.png",
+    "agotamiento": true
+  },
+  {
+    "id": 58,
+    "nombre": "Arrebato",
+    "superviviente": "Kate Denson",
+    "pathImagen": "images/perks/Kate/iconPerks_BoilOver.png"
+  },
+  {
+    "id": 59,
+    "nombre": "Baila Conmigo",
+    "superviviente": "Kate Denson",
+    "pathImagen": "images/perks/Kate/iconPerks_DanceWithMe.png"
+  },
+  {
+    "id": 60,
+    "nombre": "Oportunidades",
+    "superviviente": "Kate Denson",
+    "pathImagen": "images/perks/Kate/iconPerks_WindowsOfOpportunity.png"
+  },
+  {
+    "id": 61,
+    "nombre": "Un lugar para nosotros",
+    "superviviente": "Kwon Tae",
+    "pathImagen": "images/perks/KwonTae/T_UI_iconsPerks_aPlaceForUs.png"
+  },
+  {
+    "id": 62,
+    "nombre": "Cinco Movimientos Adelante ",
+    "superviviente": "Kwon Tae",
+    "pathImagen": "images/perks/KwonTae/T_UI_iconsPerks_FiveMovesAhead.png"
+  },
+  {
+    "id": 63,
+    "nombre": "Estado de flujo",
+    "superviviente": "Kwon Tae",
+    "pathImagen": "images/perks/KwonTae/T_UI_iconsPerks_FlowState.png"
+  },
+  {
+    "id": 64,
+    "nombre": "Elegancia",
+    "superviviente": "Lara Croft",
+    "pathImagen": "images/perks/LaraCroft/iconPerks_Finesse.png",
+    "agotamiento": true
+  },
+  {
+    "id": 65,
+    "nombre": "Endurecida",
+    "superviviente": "Lara Croft",
+    "pathImagen": "images/perks/LaraCroft/iconPerks_Hardened.png"
+  },
+  {
+    "id": 66,
+    "nombre": "Especialista",
+    "superviviente": "Lara Croft",
+    "pathImagen": "images/perks/LaraCroft/iconPerks_Specialist.png"
+  },
+  {
+    "id": 67,
+    "nombre": "Golpe Decisivo",
+    "superviviente": "Laurie Strode",
+    "pathImagen": "images/perks/LaurieStrode/iconPerks_DecisiveStrike.png"
+  },
+  {
+    "id": 68,
+    "nombre": "Objeto de Obsesión",
+    "superviviente": "Laurie Strode",
+    "pathImagen": "images/perks/LaurieStrode/iconPerks_ObjectOfObsession.png"
+  },
+  {
+    "id": 69,
+    "nombre": "Único Superviviente",
+    "superviviente": "Laurie Strode",
+    "pathImagen": "images/perks/LaurieStrode/iconPerks_SoleSurvivor.png"
+  },
+  {
+    "id": 70,
+    "nombre": "De Tripas Corazón",
+    "superviviente": "Leon Scott Kennedy",
+    "pathImagen": "images/perks/LeonJill/iconPerks_BiteTheBullet.png"
+  },
+  {
+    "id": 71,
+    "nombre": "Granada Aturdidora",
+    "superviviente": "Leon Scott Kennedy",
+    "pathImagen": "images/perks/LeonJill/iconPerks_Flashbang.png"
+  },
+  {
+    "id": 72,
+    "nombre": "Espíritu de Novato",
+    "superviviente": "Leon Scott Kennedy",
+    "pathImagen": "images/perks/LeonJill/iconPerks_RookieSpirit.png"
+  },
+  {
+    "id": 73,
+    "nombre": "Mina Explosiva",
+    "superviviente": "Jill Valentine",
+    "pathImagen": "images/perks/LeonJill/iconPerks_BlastMine.png"
+  },
+  {
+    "id": 74,
+    "nombre": "Contrafuerza",
+    "superviviente": "Jill Valentine",
+    "pathImagen": "images/perks/LeonJill/iconPerks_Counterforce.png"
+  },
+  {
+    "id": 75,
+    "nombre": "Resurgimiento",
+    "superviviente": "Jill Valentine",
+    "pathImagen": "images/perks/LeonJill/iconPerks_Resurgence.png"
+  },
+  {
+    "id": 76,
+    "nombre": "Bendición: Círculo de curación",
+    "superviviente": "Mikaela Reid",
+    "pathImagen": "images/perks/MikaelaReid/iconPerks_BoonCircleOfHealing.png"
+  },
+  {
+    "id": 77,
+    "nombre": "Bendición: Paso Sombrío",
+    "superviviente": "Mikaela Reid",
+    "pathImagen": "images/perks/MikaelaReid/iconPerks_BoonShadowStep.png"
+  },
+  {
+    "id": 78,
+    "nombre": "Clarividencia",
+    "superviviente": "Mikaela Reid",
+    "pathImagen": "images/perks/MikaelaReid/iconPerks_Clairvoyance.png"
+  },
+  {
+    "id": 79,
+    "nombre": "Dramaturgia",
+    "superviviente": "Nicolas Cage",
+    "pathImagen": "images/perks/NicolasCage/iconPerks_Dramaturgy.png",
+    "agotamiento": true
+  },
+  {
+    "id": 80,
+    "nombre": "Giro Argumental",
+    "superviviente": "Nicolas Cage",
+    "pathImagen": "images/perks/NicolasCage/iconPerks_PlotTwist.png"
+  },
+  {
+    "id": 81,
+    "nombre": "Compa de Escena",
+    "superviviente": "Nicolas Cage",
+    "pathImagen": "images/perks/NicolasCage/iconPerks_ScenePartner.png"
+  },
+  {
+    "id": 82,
+    "nombre": "Bada Bada ¡Bum!",
+    "superviviente": "Dustin Henderson",
+    "pathImagen": "images/perks/once/T_UI_iconsPerks_BadaBadaBoom.png"
+  },
+  {
+    "id": 83,
+    "nombre": "Cambio de planes",
+    "superviviente": "Dustin Henderson",
+    "pathImagen": "images/perks/once/T_UI_iconsPerks_ChangeOfPlan.png"
+  },
+  {
+    "id": 84,
+    "nombre": "Percepción extrasensorial",
+    "superviviente": "Eleven",
+    "pathImagen": "images/perks/once/T_UI_iconsPerks_ExtrasensoryPerception.png"
+  },
+  {
+    "id": 85,
+    "nombre": "Trabajo en equipo: Circuito completo",
+    "superviviente": "Dustin Henderson",
+    "pathImagen": "images/perks/once/T_UI_iconsPerks_TeamworkFullCircuit.png"
+  },
+  {
+    "id": 86,
+    "nombre": "Trabajo en equipo: Sin palabras",
+    "superviviente": "Eleven",
+    "pathImagen": "images/perks/once/T_UI_iconsPerks_TeamworkSoftSpoken.png"
+  },
+  {
+    "id": 87,
+    "nombre": "Te vemos",
+    "superviviente": "Eleven",
+    "pathImagen": "images/perks/once/T_UI_iconsPerks_WeSeeYou.png"
+  },
+  {
+    "id": 88,
+    "nombre": "No hacer daño",
+    "superviviente": "Orela Rose",
+    "pathImagen": "images/perks/OrelaRose/T_UI_iconsPerks_DoNoHarm.png"
+  },
+  {
+    "id": 89,
+    "nombre": "Deber de Cuidado",
+    "superviviente": "Orela Rose",
+    "pathImagen": "images/perks/OrelaRose/T_UI_iconsPerks_DutyOfCare.png"
+  },
+  {
+    "id": 90,
+    "nombre": "Respuesta Rápida",
+    "superviviente": "Orela Rose",
+    "pathImagen": "images/perks/OrelaRose/T_UI_iconsPerks_RapidResponse.png"
+  },
+  {
+    "id": 91,
+    "nombre": "Construcción Duradera",
+    "superviviente": "Felix Richter",
+    "pathImagen": "images/perks/FelixRichter/iconPerks_BuiltToLast.png"
+  },
+  {
+    "id": 92,
+    "nombre": "Medidas Desesperadas",
+    "superviviente": "Felix Richter",
+    "pathImagen": "images/perks/FelixRichter/iconPerks_DesperateMeasures.png"
+  },
+  {
+    "id": 93,
+    "nombre": "Visión de Futuro",
+    "superviviente": "Felix Richter",
+    "pathImagen": "images/perks/FelixRichter/iconPerks_Visionary.png"
+  },
+  {
+    "id": 94,
+    "nombre": "Farmacia",
+    "superviviente": "Quentin Smith",
+    "pathImagen": "images/perks/QuentinSmith/iconPerks_Pharmacy.png"
+  },
+  {
+    "id": 95,
+    "nombre": "Vigilia",
+    "superviviente": "Quentin Smith",
+    "pathImagen": "images/perks/QuentinSmith/iconPerks_Vigil.png"
+  },
+  {
+    "id": 96,
+    "nombre": "¡Despierta!",
+    "superviviente": "Quentin Smith",
+    "pathImagen": "images/perks/QuentinSmith/iconPerks_WakeUp.png"
+  },
+  {
+    "id": 97,
+    "nombre": "Personaje Secundario",
+    "superviviente": "Renato Lyra",
+    "pathImagen": "images/perks/RenatoThalita/iconPerks_BackgroundPlayer.png",
+    "agotamiento": true
+  },
+  {
+    "id": 98,
+    "nombre": "Impulso Sangriento",
+    "superviviente": "Renato Lyra",
+    "pathImagen": "images/perks/RenatoThalita/iconPerks_BloodRush.png"
+  },
+  {
+    "id": 99,
+    "nombre": "Trabajo en Equipo: Sigilo Colectivo",
+    "superviviente": "Renato Lyra",
+    "pathImagen": "images/perks/RenatoThalita/iconPerks_TeamworkCollectiveStealth.png"
+  },
+  {
+    "id": 100,
+    "nombre": "Suéltate",
+    "superviviente": "Thalita Lyra",
+    "pathImagen": "images/perks/RenatoThalita/iconPerks_CutLoose.png"
+  },
+  {
+    "id": 101,
+    "nombre": "Competencia Amistosa",
+    "superviviente": "Thalita Lyra",
+    "pathImagen": "images/perks/RenatoThalita/iconPerks_FriendlyCompetition.png"
+  },
+  {
+    "id": 102,
+    "nombre": "Trabajo en Equipo: El Poder de Dos",
+    "superviviente": "Thalita Lyra",
+    "pathImagen": "images/perks/RenatoThalita/iconPerks_TeamworkPowerOfTwo.png"
+  },
+  {
+    "id": 103,
+    "nombre": "Ingenio apocalíptico",
+    "superviviente": "Rick Grimes",
+    "pathImagen": "images/perks/RickMichonne/T_UI_iconPerks_ApocalypticIngenuity.png"
+  },
+  {
+    "id": 104,
+    "nombre": "¡Venid a por mí!",
+    "superviviente": "Rick Grimes",
+    "pathImagen": "images/perks/RickMichonne/T_UI_iconPerks_ComeAndGetMe.png"
+  },
+  {
+    "id": 105,
+    "nombre": "Convicción",
+    "superviviente": "Michonne Grimes",
+    "pathImagen": "images/perks/RickMichonne/T_UI_iconPerks_Conviction.png"
+  },
+  {
+    "id": 106,
+    "nombre": "Último enfrentamiento",
+    "superviviente": "Michonne Grimes",
+    "pathImagen": "images/perks/RickMichonne/T_UI_iconPerks_LastStand.png"
+  },
+  {
+    "id": 107,
+    "nombre": "Trabajo en equipo: Lanzamiento",
+    "superviviente": "Michonne Grimes",
+    "pathImagen": "images/perks/RickMichonne/T_UI_iconPerks_TeamworkThrowDown.png"
+  },
+  {
+    "id": 108,
+    "nombre": "Trabajo en equipo: ¡Endurecerse!",
+    "superviviente": "Rick Grimes",
+    "pathImagen": "images/perks/RickMichonne/T_UI_iconPerks_TeamworkToughenUp.png"
+  },
+  {
+    "id": 109,
+    "nombre": "Invocación: Arañas tejedoras",
+    "superviviente": "Sable Ward",
+    "pathImagen": "images/perks/Sable/iconsPerks_InvocationWeavingSpiders.png"
+  },
+  {
+    "id": 110,
+    "nombre": "Fuerza en las sombras",
+    "superviviente": "Sable Ward",
+    "pathImagen": "images/perks/Sable/iconsPerks_StrengthInShadows.png"
+  },
+  {
+    "id": 111,
+    "nombre": "Malicia (Sable)",
+    "superviviente": "Sable Ward",
+    "pathImagen": "images/perks/Sable/iconsPerks_Wicked.png"
+  },
+  {
+    "id": 112,
+    "nombre": "Interrogatorio",
+    "superviviente": "Shane Wiigwaas",
+    "pathImagen": "images/perks/ShaneWiigwaas/T_UI_iconsPerks_CrossExamination.png"
+  },
+  {
+    "id": 113,
+    "nombre": "Presta una mano",
+    "superviviente": "Shane Wiigwaas",
+    "pathImagen": "images/perks/ShaneWiigwaas/T_UI_iconsPerks_LendaHand.png"
+  },
+  {
+    "id": 114,
+    "nombre": "Acelerador a fondo",
+    "superviviente": "Shane Wiigwaas",
+    "pathImagen": "images/perks/ShaneWiigwaas/T_UI_iconsPerks_WideOpenThrottle.png"
+  },
+  {
+    "id": 115,
+    "nombre": "Niñero",
+    "superviviente": "Steve Harrington",
+    "pathImagen": "images/perks/SteveNancy/iconPerks_babySitter.png"
+  },
+  {
+    "id": 116,
+    "nombre": "Mejor Juntos",
+    "superviviente": "Nancy Wheeler",
+    "pathImagen": "images/perks/SteveNancy/iconPerks_betterTogether.png"
+  },
+  {
+    "id": 117,
+    "nombre": "Camaradería",
+    "superviviente": "Steve Harrington",
+    "pathImagen": "images/perks/SteveNancy/iconPerks_Camaraderie.png"
+  },
+  {
+    "id": 118,
+    "nombre": "Fijación",
+    "superviviente": "Nancy Wheeler",
+    "pathImagen": "images/perks/SteveNancy/iconPerks_Fixated.png"
+  },
+  {
+    "id": 119,
+    "nombre": "Fuerza Interior",
+    "superviviente": "Nancy Wheeler",
+    "pathImagen": "images/perks/SteveNancy/iconPerks_innerStrength.png"
+  },
+  {
+    "id": 120,
+    "nombre": "Segundo Aliento",
+    "superviviente": "Steve Harrington",
+    "pathImagen": "images/perks/SteveNancy/iconPerks_secondWind.png"
+  },
+  {
+    "id": 121,
+    "nombre": "Ruptura Limpia",
+    "superviviente": "Taurie Cain",
+    "pathImagen": "images/perks/TaurieCain/T_UI_iconsPerks_CleanBreak.png"
+  },
+  {
+    "id": 122,
+    "nombre": "Invocación: Cuervos Traicioneros",
+    "superviviente": "Taurie Cain",
+    "pathImagen": "images/perks/TaurieCain/T_UI_iconsPerks_InvocationTreacherousCrows.png"
+  },
+  {
+    "id": 123,
+    "nombre": "Cargar con el Peso",
+    "superviviente": "Taurie Cain",
+    "pathImagen": "images/perks/TaurieCain/T_UI_iconsPerks_ShoulderTheBurden.png"
+  },
+  {
+    "id": 124,
+    "nombre": "Exultación",
+    "superviviente": "Trevor Belmont",
+    "pathImagen": "images/perks/TrevorBelmont/iconPerks_Exultation.png"
+  },
+  {
+    "id": 125,
+    "nombre": "Ojos de Belmont",
+    "superviviente": "Trevor Belmont",
+    "pathImagen": "images/perks/TrevorBelmont/iconPerks_EyesOfBelmont.png"
+  },
+  {
+    "id": 126,
+    "nombre": "Momento de Gloria",
+    "superviviente": "Trevor Belmont",
+    "pathImagen": "images/perks/TrevorBelmont/iconPerks_MomentOfGlory.png"
+  },
+  {
+    "id": 127,
+    "nombre": "Notas Fantasma",
+    "superviviente": "Vee Boonyasak",
+    "pathImagen": "images/perks/Vee/T_UI_iconPerks_GhostNotes.png"
+  },
+  {
+    "id": 128,
+    "nombre": "¡Uno-Dos-Tres-Cuatro!",
+    "superviviente": "Vee Boonyasak",
+    "pathImagen": "images/perks/Vee/T_UI_iconPerks_OneTwoThreeFour.png"
+  },
+  {
+    "id": 129,
+    "nombre": "Vida en la ruta",
+    "superviviente": "Vee Boonyasak",
+    "pathImagen": "images/perks/Vee/T_UI_iconPerks_RoadLife.png"
+  },
+  {
+    "id": 130,
+    "nombre": "Conocimiento de la Niebla",
+    "superviviente": "Vittorio Toscano",
+    "pathImagen": "images/perks/VittorioToscano/iconPerks_Fogwise.png"
+  },
+  {
+    "id": 131,
+    "nombre": "Energía Potencial",
+    "superviviente": "Vittorio Toscano",
+    "pathImagen": "images/perks/VittorioToscano/iconPerks_PotentialEnergy.png"
+  },
+  {
+    "id": 132,
+    "nombre": "Gambito Rápido",
+    "superviviente": "Vittorio Toscano",
+    "pathImagen": "images/perks/VittorioToscano/iconPerks_VittoriosGambit.png"
+  },
+  {
+    "id": 133,
+    "nombre": "Trampa Química",
+    "superviviente": "Ellen Ripley",
+    "pathImagen": "images/perks/Wormhole/iconPerks_ChemicalTrap.png"
+  },
+  {
+    "id": 134,
+    "nombre": "Pies Ligeros",
+    "superviviente": "Ellen Ripley",
+    "pathImagen": "images/perks/Wormhole/iconPerks_LightFooted.png"
+  },
+  {
+    "id": 135,
+    "nombre": "Estrella de la Suerte",
+    "superviviente": "Ellen Ripley",
+    "pathImagen": "images/perks/Wormhole/iconPerks_LuckyStar.png"
+  },
+  {
+    "id": 136,
+    "nombre": "Bendición: Teoría Oscura",
+    "superviviente": "Yoichi Asakawa",
+    "pathImagen": "images/perks/YoichiAsakawa/iconPerks_DarkTheory.png"
+  },
+  {
+    "id": 137,
+    "nombre": "Conexión Empática",
+    "superviviente": "Yoichi Asakawa",
+    "pathImagen": "images/perks/YoichiAsakawa/iconPerks_EmpathicConnection.png"
+  },
+  {
+    "id": 138,
+    "nombre": "Consejo Paterno",
+    "superviviente": "Yoichi Asakawa",
+    "pathImagen": "images/perks/YoichiAsakawa/iconPerks_ParentalGuidance.png"
+  },
+  {
+    "id": 139,
+    "nombre": "Cueste lo que Cueste",
+    "superviviente": "Yui Kimura",
+    "pathImagen": "images/perks/YuiKimura/iconPerks_AnyMeansNecessary.png"
+  },
+  {
+    "id": 140,
+    "nombre": "Fuga",
+    "superviviente": "Yui Kimura",
+    "pathImagen": "images/perks/YuiKimura/iconPerks_Breakout.png"
+  },
+  {
+    "id": 141,
+    "nombre": "Golpe de Suerte",
+    "superviviente": "Yui Kimura",
+    "pathImagen": "images/perks/YuiKimura/iconPerks_LuckyBreak.png"
+  },
+  {
+    "id": 142,
+    "nombre": "Vía rápida",
+    "superviviente": "Yun-Jin Lee",
+    "pathImagen": "images/perks/YunJinLee/iconPerks_FastTrack.png"
+  },
+  {
+    "id": 143,
+    "nombre": "Autoconservación",
+    "superviviente": "Yun-Jin Lee",
+    "pathImagen": "images/perks/YunJinLee/iconPerks_Self-Preservation.png"
+  },
+  {
+    "id": 144,
+    "nombre": "Golpe maestro",
+    "superviviente": "Yun-Jin Lee",
+    "pathImagen": "images/perks/YunJinLee/iconPerks_SmashHit.png",
+    "agotamiento": true
+  },
+  {
+    "id": 145,
+    "nombre": "Por los Demás",
+    "superviviente": "Zarina Kassir",
+    "pathImagen": "images/perks/Zarina/iconPerks_ForThePeople.png"
+  },
+  {
+    "id": 146,
+    "nombre": "Extraoficial",
+    "superviviente": "Zarina Kassir",
+    "pathImagen": "images/perks/Zarina/iconPerks_OffTheRecord.png"
+  },
+  {
+    "id": 147,
+    "nombre": "Bulo",
+    "superviviente": "Zarina Kassir",
+    "pathImagen": "images/perks/Zarina/iconPerks_RedHerring.png"
+  },
+  {
+    "id": 148,
+    "nombre": "Familia",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_Kindred.png"
+  },
+  {
+    "id": 149,
+    "nombre": "Líder",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_Leader.png"
+  },
+  {
+    "id": 150,
+    "nombre": "Ligero",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_Lightweight.png"
+  },
+  {
+    "id": 151,
+    "nombre": "Nadie se queda atrás",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_NoOneLeftBehind.png"
+  },
+  {
+    "id": 152,
+    "nombre": "Instinto de saqueador",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_PlunderersInstinct.png"
+  },
+  {
+    "id": 153,
+    "nombre": "Premonición",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_Premonition.png"
+  },
+  {
+    "id": 154,
+    "nombre": "Demuestra lo que vales",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_ProveThyself.png"
+  },
+  {
+    "id": 155,
+    "nombre": "Rápido y silencioso",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_QuickAndQuiet.png"
+  },
+  {
+    "id": 156,
+    "nombre": "Resiliencia",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_Resilience.png"
+  },
+  {
+    "id": 157,
+    "nombre": "Saboteador",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_Saboteur.png"
+  },
+  {
+    "id": 158,
+    "nombre": "Autocuración",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_SelfCare.png"
+  },
+  {
+    "id": 159,
+    "nombre": "Carne resbaladiza",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_SlipperyMeat.png"
+  },
+  {
+    "id": 160,
+    "nombre": "Caza Menor",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_SmallGame.png"
+  },
+  {
+    "id": 161,
+    "nombre": "Sprint",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_SprintBurst.png",
+    "agotamiento": true
+  },
+  {
+    "id": 162,
+    "nombre": "Saber callejero",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_Streetwise.png"
+  },
+  {
+    "id": 163,
+    "nombre": "Esto no está pasando",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_ThisIsNotHappening.png"
+  },
+  {
+    "id": 164,
+    "nombre": "Evasión urbana",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_UrbanEvasion.png"
+  },
+  {
+    "id": 165,
+    "nombre": "Lo conseguiremos",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_WellMakeIt.png"
+  },
+  {
+    "id": 166,
+    "nombre": "Adrenalina",
+    "superviviente": "Meg Thomas",
+    "pathImagen": "images/perks/iconPerks_Adrenaline.png"
+  },
+  {
+    "id": 167,
+    "nombre": "Caída Equilibrada",
+    "superviviente": "Nea Karlsson",
+    "pathImagen": "images/perks/iconPerks_BalancedLanding.png",
+    "agotamiento": true
+  },
+  {
+    "id": 168,
+    "nombre": "Vínculo",
+    "superviviente": "Dwight Fairfield",
+    "pathImagen": "images/perks/iconPerks_Bond.png"
+  },
+  {
+    "id": 169,
+    "nombre": "Conocimientos de Botánica",
+    "superviviente": "Claudette Morel",
+    "pathImagen": "images/perks/iconPerks_BotanyKnowledge.png"
+  },
+  {
+    "id": 170,
+    "nombre": "Espíritu Sereno",
+    "superviviente": "Jake Park",
+    "pathImagen": "images/perks/iconPerks_CalmSpirit.png"
+  },
+  {
+    "id": 171,
+    "nombre": "Sentido Oscuro",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_DarkSense.png"
+  },
+  {
+    "id": 172,
+    "nombre": "Déjà Vu",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_DejaVu.png"
+  },
+  {
+    "id": 173,
+    "nombre": "Empatía",
+    "superviviente": "Claudette Morel",
+    "pathImagen": "images/perks/iconPerks_Empathy.png"
+  },
+  {
+    "id": 174,
+    "nombre": "Esperanza",
+    "superviviente": "General",
+    "pathImagen": "images/perks/iconPerks_Hope.png"
+  },
+  {
+    "id": 175,
+    "nombre": "Voluntad de Hierro",
+    "superviviente": "Jake Park",
+    "pathImagen": "images/perks/iconPerks_IronWill.png"
+  },
+  {
+    "id": 176,
+    "nombre": "Escalofrío",
+    "superviviente": "Jake Park",
+    "pathImagen": "images/perks/iconPerks_SpineChill.png"
+  }
+]

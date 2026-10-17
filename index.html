@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas Malditas DBD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <h1>🐈‍⬛ Cartas Malditas 🩸</h1>
+    <p class="subtitulo">Elige una de las dos antes de que el gato pierda la paciencia</p>
+
+    <div class="main-layout">
+        <!-- Panel izquierdo: la build que vas armando -->
+        <div class="build-panel">
+            <h3>Tu Build</h3>
+            <div id="slotsContainer"></div>
+        </div>
+
+        <!-- Mesa: temporizador + 2 cartas -->
+        <div class="zona-juego">
+            <div class="temporizador">
+                <div class="barra-fondo"><div id="barraTiempo" class="barra"></div></div>
+                <span id="textoTiempo"></span>
+            </div>
+
+            <div id="mesa" class="mesa">
+                <p class="mensaje-mesa">Dos cartas. Cada vez menos tiempo. Un gato impaciente.</p>
+            </div>
+
+            <div class="controles">
+                <button id="btnEmpezar">Robar cartas</button>
+                <button id="btnReiniciar" hidden>Nueva build</button>
+            </div>
+            <p class="ayuda">Clic en una carta o teclas <kbd>1</kbd> / <kbd>2</kbd> (<kbd>3</kbd> en la ronda de la suerte)</p>
+        </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
