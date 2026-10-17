@@ -141,6 +141,9 @@ h1 {
 }
 
 .mesa {
+    --ancho-carta: clamp(140px, 40vw, 260px);
+    /* Hueco arriba para las orejas (+ el salto al pasar el ratón), así no tapan el tiempo */
+    padding-top: calc(var(--ancho-carta) * 0.3 + 14px);
     display: flex;
     gap: clamp(14px, 4vw, 40px);
     justify-content: center;
@@ -156,7 +159,7 @@ h1 {
 /* ─── Carta ─── */
 .carta {
     position: relative;
-    width: clamp(140px, 40vw, 260px);
+    width: var(--ancho-carta);
     aspect-ratio: 2 / 3;
     padding: 0;
     border: none;
@@ -168,27 +171,50 @@ h1 {
     transition: transform 0.25s, opacity 0.5s;
 }
 
-/* Orejas de gato encima de la carta */
-.carta::before,
-.carta::after {
-    content: '';
-    position: absolute;
-    top: -16px;
-    width: 0;
-    height: 0;
-    border-left: 16px solid transparent;
-    border-right: 16px solid transparent;
-    border-bottom: 22px solid var(--borde);
-    z-index: 1;
+/* ─── Orejas de gato (SVG) ─── */
+.carta {
+    --oreja: var(--borde);
+    --oreja-interior: #c98a96;
 }
-.carta::before { left: 14px; transform: rotate(-12deg); }
-.carta::after { right: 14px; transform: rotate(12deg); }
+
+.oreja {
+    position: absolute;
+    top: -15%;
+    width: 24%;
+    z-index: 0; /* detrás de la carta: parece que salen de ella */
+    transform-origin: 50% 100%;
+    transform: rotate(var(--giro));
+    transition: transform 0.25s ease;
+    animation: temblor 5s ease-in-out infinite;
+    pointer-events: none;
+}
+.oreja svg { display: block; width: 100%; height: auto; overflow: visible; }
+.oreja .exterior { fill: var(--oreja); transition: fill 0.4s; }
+.oreja .interior { fill: var(--oreja-interior); transition: fill 0.4s; }
+.oreja .pelo { stroke: var(--crema); stroke-width: 1.2; stroke-linecap: round; opacity: 0.55; fill: none; }
+
+.oreja-izq { left: 7%; --giro: -14deg; }
+.oreja-der { right: 7%; --giro: 14deg; animation-delay: 1.7s; }
+
+/* Atentas al pasar el ratón */
+.carta:hover:not(:disabled) .oreja { animation: none; transform: rotate(calc(var(--giro) * 0.3)) scaleY(1.12); }
+
+/* Últimos segundos: orejas aplastadas hacia atrás, gato enojado */
+.gato-enojado .oreja,
+.gato-enojado .carta:hover .oreja { animation: enojado 0.18s ease-in-out infinite alternate; }
+
+/* Colores especiales solo al voltear, para no estropear la sorpresa */
+.carta.es-castigo.volteada { --oreja: var(--sangre); --oreja-interior: #1a0000; }
+.carta.es-castigo.volteada .oreja { animation: erizar 0.12s linear 8; }
+.carta.es-comodin.volteada { --oreja: #2ed573; --oreja-interior: #b9f5d0; }
+.carta.es-comodin.volteada .oreja { animation: contenta 0.5s ease-out 2; }
 
 .carta:hover,
 .carta:focus-visible { transform: translateY(-8px); outline: none; }
 
 .carta-inner {
     position: relative;
+    z-index: 1;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
@@ -275,8 +301,6 @@ h1 {
     border-color: var(--sangre-claro);
     background: radial-gradient(circle at 50% 35%, #a00000, #2a0000);
 }
-.carta.es-castigo.volteada::before,
-.carta.es-castigo.volteada::after { border-bottom-color: var(--sangre-claro); }
 
 .carta.elegida { transform: translateY(-14px) scale(1.06); }
 .carta.elegida .cara { box-shadow: 0 0 35px rgba(232, 196, 150, 0.8); }
@@ -390,6 +414,28 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
     to { transform: none; opacity: 1; }
 }
 
+@keyframes temblor {
+    0%, 88%, 100% { transform: rotate(var(--giro)); }
+    90% { transform: rotate(calc(var(--giro) + 9deg)); }
+    92% { transform: rotate(calc(var(--giro) - 4deg)); }
+    94% { transform: rotate(calc(var(--giro) + 5deg)); }
+}
+
+@keyframes enojado {
+    from { transform: rotate(calc(var(--giro) * 4)) scaleY(0.72); }
+    to { transform: rotate(calc(var(--giro) * 4.3)) scaleY(0.68); }
+}
+
+@keyframes erizar {
+    0%, 100% { transform: rotate(var(--giro)) scale(1.15); }
+    50% { transform: rotate(calc(var(--giro) * -0.4)) scale(1.2); }
+}
+
+@keyframes contenta {
+    0%, 100% { transform: rotate(var(--giro)) translateY(0); }
+    50% { transform: rotate(calc(var(--giro) * 0.4)) translateY(-12%); }
+}
+
 @keyframes latido {
     from { opacity: 1; }
     to { opacity: 0.55; }
@@ -414,12 +460,11 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
     .build-slot img { width: 64px; height: 64px; }
     .zona-juego { max-width: 1000px; }
     .mesa { min-height: 560px; gap: 60px; }
-    .carta { width: 340px; }
+    .mesa { --ancho-carta: 340px; }
     .mesa-suerte .carta { width: 290px; }
     .comodin-icono { font-size: 140px; }
     .resumen h2 { font-size: 34px; }
     .resumen li { font-size: 20px; padding: 14px 18px; grid-template-columns: 40px 1fr 1fr; }
-    .carta::before, .carta::after { top: -22px; border-left-width: 22px; border-right-width: 22px; border-bottom-width: 30px; }
     .frente strong { font-size: 24px; }
     .frente small { font-size: 16px; }
     .barra-fondo { height: 16px; }
@@ -439,13 +484,12 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
     .build-slot img { width: 90px; height: 90px; }
     .zona-juego { max-width: 1500px; }
     .mesa { min-height: 800px; gap: 90px; }
-    .carta { width: 500px; }
+    .mesa { --ancho-carta: 500px; }
     .mesa-suerte .carta { width: 430px; }
     .comodin-icono { font-size: 200px; }
     .resumen h2 { font-size: 48px; }
     .resumen p { font-size: 24px; }
     .resumen li { font-size: 28px; padding: 20px 26px; grid-template-columns: 56px 1fr 1fr; }
-    .carta::before, .carta::after { top: -32px; border-left-width: 32px; border-right-width: 32px; border-bottom-width: 44px; }
     .frente strong { font-size: 34px; }
     .frente small { font-size: 22px; }
     .etiqueta { font-size: 18px; }

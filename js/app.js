@@ -61,6 +61,21 @@ function actualizarSlots() {
 }
 
 // ─── Cartas ───────────────────────────────────────────────────────────────────
+// Orejas en SVG: la izquierda tiene una muesca (gato callejero que ha peleado)
+const PELO_OREJA = '<path class="pelo" d="M14 48 L16 34 M19 48 L19 30 M24 48 L22 35"/>';
+const INTERIOR_OREJA = '<path class="interior" d="M9 50 C10 34 13 20 18 10 C23 20 28 34 31 50 Z"/>';
+const OREJAS = `
+    <span class="oreja oreja-izq"><svg viewBox="0 0 40 50" aria-hidden="true">
+        <path class="exterior" d="M2 50 C3 40 4 33 6 27 L11 25 L8 20 C10 12 13 6 16 2 C18 0 21 0 22 2 C30 14 36 32 38 50 Z"/>
+        ${INTERIOR_OREJA}${PELO_OREJA}
+        <circle cx="7" cy="31" r="1.4" fill="#c0392b"/>
+    </svg></span>
+    <span class="oreja oreja-der"><svg viewBox="0 0 40 50" aria-hidden="true">
+        <path class="exterior" d="M2 50 C3 30 8 12 16 2 C18 0 21 0 22 2 C30 14 36 32 38 50 Z"/>
+        ${INTERIOR_OREJA}${PELO_OREJA}
+    </svg></span>
+`;
+
 function crearCarta(perk, indice, bocaArriba) {
     const carta = document.createElement('button');
     carta.className = 'carta repartida';
@@ -71,6 +86,7 @@ function crearCarta(perk, indice, bocaArriba) {
     // Boca abajo sin el nombre de la perk: la carta es sorpresa hasta elegirla
     carta.setAttribute('aria-label', bocaArriba ? perk.nombre : `Carta ${indice + 1}`);
     carta.innerHTML = `
+        ${OREJAS}
         <div class="carta-inner">
             <div class="cara dorso">
                 <div class="ojo"></div>
@@ -127,6 +143,7 @@ function iniciarTimer(duracion) {
         const segundos = Math.ceil(restante / 1000);
         barra.style.width = `${(restante / duracion) * 100}%`;
         barra.classList.toggle('urgente', segundos <= 3);
+        mesa.classList.toggle('gato-enojado', segundos <= 3 && restante > 0);
         textoTiempo.innerText = `${segundos}s`;
 
         if (segundos !== ultimoSegundo && segundos <= 3 && segundos > 0) playTick();
@@ -164,6 +181,7 @@ async function elegir(indice, porTiempo = false) {
     if (!eligiendo || indice >= par.length) return;
     eligiendo = false;
     cancelAnimationFrame(timerId);
+    mesa.classList.remove('gato-enojado');
 
     const perk = par[indice];
     const cartas = [...mesa.querySelectorAll('.carta')];
